@@ -1,23 +1,68 @@
 aid: archsystems
+
 name: Archsystems
-description: 'Archsystems is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://archsystems.com/wp-content/uploads/2025/04/ASI-WoodPanels-collage.png
+
+description: Archsystems, also known as Architectural Systems, Inc., is a leading global provider of innovative, distinctive, and sustainable
+  interior finishes. The company collaborates with architects, designers, and decision‑makers across market segments, offering material expertise,
+  project management, material take‑offs, on‑site support, and a commitment to service. Their product lines include wood panels, porcelains, surfacing
+  materials, and luxury vinyls, showcased through an online catalog and extensive resources.
+
 url: https://raw.githubusercontent.com/api-evangelist/archsystems/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
+- Architecture
+- InteriorDesign
+- Materials
+- Manufacturing
+- Sustainable
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/archsystems-hosts.yml
+- type: DomainSecurity
+  url: security/archsystems-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/archsystems
+  url: https://archsystems.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: All attempted OpenAPI spec URLs on archsystems.com, catalog.archsystems.com, and api.archsystems.com returned 404.
+  evidence:
+  - url: https://archsystems.com/openapi.json
+    status: 404
+  - url: https://catalog.archsystems.com/openapi.json
+    status: 404
+  - url: https://api.archsystems.com/openapi.json
+    status: 404
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
